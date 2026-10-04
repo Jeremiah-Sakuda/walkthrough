@@ -1,0 +1,25 @@
+{
+  "review_date_local": "2026-10-03",
+  "timezone": "America/New_York",
+  "purpose": "Independent simulated hackathon judge panel",
+  "official_rules": "https://paypalaihackathon.devpost.com/rules",
+  "numeric_scale": "Our 0\u201310 per criterion, five equal weights, total out of 100",
+  "isolation": "Fresh agents with no inherited conversation; one frozen tracked source repository each; no peer reviews before submitting scores",
+  "snapshot_method": "git archive HEAD; node_modules symlinked to existing locked installation; no .env or original runtime data copied",
+  "verification_limits": "No clean npm ci performed for these snapshots. No live PayPal or model calls. Each judge records their own verification scope.",
+  "projects": {
+    "walkthrough": {
+      "commit": "521a0f4ff8c0760e4d0bdcbd18c86302505979ec",
+      "repository": "https://github.com/Jeremiah-Sakuda/walkthrough",
+      "visibility_verified": "PRIVATE",
+      "snapshot": "/private/tmp/paypal-judge-20261003/walkthrough",
+      "isolated_demo": "http://127.0.0.1:3203",
+      "snapshot_build": "passed"
+    }
+  },
+  "snapshot_verification": {
+    "commit": "521a0f4ff8c0760e4d0bdcbd18c86302505979ec",
+    "tracked_files_checked": 22,
+    "mismatches": []
+  }
+}

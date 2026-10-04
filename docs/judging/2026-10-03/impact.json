@@ -1,0 +1,15 @@
+{
+  "project": "Walkthrough",
+  "commit": "521a0f4ff8c0760e4d0bdcbd18c86302505979ec",
+  "judge": "impact",
+  "scores": {
+    "technology": 6.5,
+    "design": 7,
+    "impact": 6,
+    "innovation": 7,
+    "presentation": 5.5
+  },
+  "total": 64,
+  "readiness": "conditional",
+  "confidence": "medium"
+}
