@@ -33,8 +33,8 @@ export class Payments {
     }catch(error){op.status='unknown';op.error=error.message;this.store.save();throw error;}
   }
   async reconcile(c){
-    const ops=this.store.data.operations.filter(o=>o.caseId===c.id&&o.status!=='confirmed');
-    for(const op of ops){let result;
+    const ops=this.store.data.operations.filter(o=>o.caseId===c.id&&(o.status!=='confirmed'||!o.appliedAt));
+    for(const op of ops){if(op.status==='confirmed')continue;let result;
       if(this.mode==='simulated')result=op.simulatedProviderResult;
       else{
         if(op.type==='authorize'&&c.payment.orderId){const order=await this.request(`/v2/checkout/orders/${c.payment.orderId}`);result=order.purchase_units?.[0]?.payments?.authorizations?.find(a=>a.status==='CREATED');}

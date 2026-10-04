@@ -3,6 +3,7 @@ import { readFileSync,existsSync,statSync } from 'node:fs';
 import { resolve,extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { randomBytes } from 'node:crypto';
+import { printableReport } from './report.mjs';
 import { Store } from './store.mjs';
 import { Payments } from './payments.mjs';
 import { Walkthrough,initialData,AppError } from './domain.mjs';
@@ -10,6 +11,7 @@ const root=resolve(fileURLToPath(new URL('..',import.meta.url)));
 const store=new Store(resolve(root,process.env.DATA_DIR||'data'),()=>initialData(process.env.PAYMENT_MODE||'simulated'));
 const payments=new Payments(store);
 const app=new Walkthrough(store,payments);
+await app.recoverConfirmed();
 const sessions=new Map(),buckets=new Map();
 const port=Number(process.env.PORT||3103),host=process.env.HOST||'127.0.0.1';
 if(!['127.0.0.1','localhost','::1'].includes(host))throw new Error('This demo has local role switching and must bind to loopback. Add production identity before public hosting.');
@@ -39,6 +41,8 @@ const server=http.createServer(async(req,res)=>{
       const sid=req.headers.cookie?.match(/(?:^|;\s*)wt_session=([^;]+)/)?.[1];const actor=sessions.get(sid);if(!actor||actor.expires<Date.now())throw new AppError('Choose a demo role to start.',401);
       if(req.method==='POST'&&url.pathname==='/api/reset'){await body(req);return json(res,200,{...await app.reset(actor),actor});}
       if(req.method==='GET'&&url.pathname==='/api/state')return json(res,200,{...app.snapshot(actor),actor});
+      const report=url.pathname.match(/^\/api\/cases\/([^/]+)\/report$/);
+      if(req.method==='GET'&&report){const c=app.get(report[1],actor);if(!c.review)throw new AppError('The independently reviewed report is not available yet.',409);res.writeHead(200,{'Content-Type':'text/html; charset=utf-8','Cache-Control':'private, no-store','Content-Security-Policy':"default-src 'none'; img-src data:; style-src 'unsafe-inline'; frame-ancestors 'none'; base-uri 'none'"});return res.end(printableReport(c));}
       const media=url.pathname.match(/^\/api\/cases\/([^/]+)\/evidence\/([^/]+)$/);
       if(req.method==='GET'&&media){const c=app.get(media[1],actor);const e=c.evidence.find(e=>e.id===media[2]);if(!e)throw new AppError('Evidence not found',404);const [prefix,b64]=e.data.split(',');res.writeHead(200,{'Content-Type':prefix.slice(5).split(';')[0],'Cache-Control':'private, no-store'});return res.end(Buffer.from(b64,'base64'));}
       const action=url.pathname.match(/^\/api\/cases\/([^/]+)\/([a-z-]+)$/);
