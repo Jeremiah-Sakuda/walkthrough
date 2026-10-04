@@ -1,0 +1,552 @@
+{
+  "version": 1,
+  "datasetSha256": "11bee9bf65ed9cfb2b730d94d70bb448ece6c6652f454502eac41acda1ffbd7e",
+  "executedAt": "2026-10-04T02:34:51.827Z",
+  "mode": "offline-rules",
+  "model": null,
+  "providerRequests": 0,
+  "method": "Exact concern-term presence in scope reference/request. This measures mechanical retention, not semantic usefulness, photograph quality, or model superiority. Human relevance/edit-time fields remain unmeasured.",
+  "summary": {
+    "examples": 8,
+    "concerns": 14,
+    "baselineRepresented": 1,
+    "candidateRepresented": 14,
+    "unsupportedListingQuotes": 0,
+    "meanLatencyMs": 0.099
+  },
+  "results": [
+    {
+      "id": "basement-laundry",
+      "baseline": {
+        "concerns": 2,
+        "represented": 0,
+        "unsupportedListingQuotes": 0,
+        "excludedItems": 0,
+        "itemCount": 4
+      },
+      "candidate": {
+        "concerns": 2,
+        "represented": 2,
+        "unsupportedListingQuotes": 0,
+        "excludedItems": 0,
+        "itemCount": 6
+      },
+      "latencyMs": 0.554,
+      "tokens": 0,
+      "costUsd": 0,
+      "items": [
+        {
+          "id": "exterior",
+          "title": "Address & building entrance",
+          "claim": "Address supplied by the renter",
+          "request": "Show the building number and entrance together. Do not photograph occupants.",
+          "source": "renter-approved baseline"
+        },
+        {
+          "id": "kitchen",
+          "title": "Kitchen & appliances",
+          "claim": "Kitchen has a sink and electric stove",
+          "request": "Show the kitchen layout, sink, and visible appliances.",
+          "source": "listing text"
+        },
+        {
+          "id": "bedroom",
+          "title": "Bedroom & natural light",
+          "claim": "Bedroom condition is not independently established",
+          "request": "Show all bedroom corners and the window in one continuous visit.",
+          "source": "renter-approved baseline"
+        },
+        {
+          "id": "bathroom",
+          "title": "Bathroom & visible condition",
+          "claim": "Bathroom condition is not independently established",
+          "request": "Show fixtures and visible signs of moisture. No destructive inspection.",
+          "source": "renter-approved baseline"
+        },
+        {
+          "id": "question-1",
+          "questionId": "q-1",
+          "title": "Renter question 1",
+          "claim": "Photograph basement water stains.",
+          "request": "Collect a clear photograph and a specific visible observation addressing: Photograph basement water stains. If access or a visible answer is unavailable, record uncertainty and the reason.",
+          "source": "Renter question",
+          "excluded": false
+        },
+        {
+          "id": "question-2",
+          "questionId": "q-2",
+          "title": "Renter question 2",
+          "claim": "Check whether the washing machine is present.",
+          "request": "Collect a clear photograph and a specific visible observation addressing: Check whether the washing machine is present. If access or a visible answer is unavailable, record uncertainty and the reason.",
+          "source": "Renter question",
+          "excluded": false
+        }
+      ],
+      "humanRelevance": null,
+      "humanEditingSeconds": null
+    },
+    {
+      "id": "mobility",
+      "baseline": {
+        "concerns": 2,
+        "represented": 0,
+        "unsupportedListingQuotes": 0,
+        "excludedItems": 0,
+        "itemCount": 4
+      },
+      "candidate": {
+        "concerns": 2,
+        "represented": 2,
+        "unsupportedListingQuotes": 0,
+        "excludedItems": 0,
+        "itemCount": 6
+      },
+      "latencyMs": 0.107,
+      "tokens": 0,
+      "costUsd": 0,
+      "items": [
+        {
+          "id": "exterior",
+          "title": "Address & building entrance",
+          "claim": "Address supplied by the renter",
+          "request": "Show the building number and entrance together. Do not photograph occupants.",
+          "source": "renter-approved baseline"
+        },
+        {
+          "id": "kitchen",
+          "title": "Kitchen & appliances",
+          "claim": "Kitchen condition is not independently established",
+          "request": "Show the kitchen layout, sink, and visible appliances.",
+          "source": "renter-approved baseline"
+        },
+        {
+          "id": "bedroom",
+          "title": "Bedroom & natural light",
+          "claim": "Bedroom condition is not independently established",
+          "request": "Show all bedroom corners and the window in one continuous visit.",
+          "source": "renter-approved baseline"
+        },
+        {
+          "id": "bathroom",
+          "title": "Bathroom & visible condition",
+          "claim": "There is a narrow entrance landing and a tiled bathroom",
+          "request": "Show fixtures and visible signs of moisture. No destructive inspection.",
+          "source": "listing text"
+        },
+        {
+          "id": "question-1",
+          "questionId": "q-1",
+          "title": "Renter question 1",
+          "claim": "Show the stairs and handrail.",
+          "request": "Collect a clear photograph and a specific visible observation addressing: Show the stairs and handrail. If access or a visible answer is unavailable, record uncertainty and the reason.",
+          "source": "Renter question",
+          "excluded": false
+        },
+        {
+          "id": "question-2",
+          "questionId": "q-2",
+          "title": "Renter question 2",
+          "claim": "Photograph the entrance landing width without claiming accessibility compliance.",
+          "request": "Collect a clear photograph and a specific visible observation addressing: Photograph the entrance landing width without claiming accessibility compliance. If access or a visible answer is unavailable, record uncertainty and the reason.",
+          "source": "Renter question",
+          "excluded": false
+        }
+      ],
+      "humanRelevance": null,
+      "humanEditingSeconds": null
+    },
+    {
+      "id": "light-noise",
+      "baseline": {
+        "concerns": 2,
+        "represented": 0,
+        "unsupportedListingQuotes": 0,
+        "excludedItems": 0,
+        "itemCount": 4
+      },
+      "candidate": {
+        "concerns": 2,
+        "represented": 2,
+        "unsupportedListingQuotes": 0,
+        "excludedItems": 0,
+        "itemCount": 6
+      },
+      "latencyMs": 0.02,
+      "tokens": 0,
+      "costUsd": 0,
+      "items": [
+        {
+          "id": "exterior",
+          "title": "Address & building entrance",
+          "claim": "Kitchen faces a busy street and includes a dishwasher",
+          "request": "Show the building number and entrance together. Do not photograph occupants.",
+          "source": "listing text"
+        },
+        {
+          "id": "kitchen",
+          "title": "Kitchen & appliances",
+          "claim": "Kitchen faces a busy street and includes a dishwasher",
+          "request": "Show the kitchen layout, sink, and visible appliances.",
+          "source": "listing text"
+        },
+        {
+          "id": "bedroom",
+          "title": "Bedroom & natural light",
+          "claim": "Bathroom has a window",
+          "request": "Show all bedroom corners and the window in one continuous visit.",
+          "source": "listing text"
+        },
+        {
+          "id": "bathroom",
+          "title": "Bathroom & visible condition",
+          "claim": "Bathroom has a window",
+          "request": "Show fixtures and visible signs of moisture. No destructive inspection.",
+          "source": "listing text"
+        },
+        {
+          "id": "question-1",
+          "questionId": "q-1",
+          "title": "Renter question 1",
+          "claim": "Show the bedroom light at the scheduled time.",
+          "request": "Collect a clear photograph and a specific visible observation addressing: Show the bedroom light at the scheduled time. If access or a visible answer is unavailable, record uncertainty and the reason.",
+          "source": "Renter question",
+          "excluded": false
+        },
+        {
+          "id": "question-2",
+          "questionId": "q-2",
+          "title": "Renter question 2",
+          "claim": "Describe audible street noise during this visit, without predicting nighttime noise.",
+          "request": "Collect a clear photograph and a specific visible observation addressing: Describe audible street noise during this visit, without predicting nighttime noise. If access or a visible answer is unavailable, record uncertainty and the reason.",
+          "source": "Renter question",
+          "excluded": false
+        }
+      ],
+      "humanRelevance": null,
+      "humanEditingSeconds": null
+    },
+    {
+      "id": "unsupported-authority",
+      "baseline": {
+        "concerns": 2,
+        "represented": 0,
+        "unsupportedListingQuotes": 0,
+        "excludedItems": 0,
+        "itemCount": 4
+      },
+      "candidate": {
+        "concerns": 2,
+        "represented": 2,
+        "unsupportedListingQuotes": 0,
+        "excludedItems": 1,
+        "itemCount": 6
+      },
+      "latencyMs": 0.015,
+      "tokens": 0,
+      "costUsd": 0,
+      "items": [
+        {
+          "id": "exterior",
+          "title": "Address & building entrance",
+          "claim": "Address supplied by the renter",
+          "request": "Show the building number and entrance together. Do not photograph occupants.",
+          "source": "renter-approved baseline"
+        },
+        {
+          "id": "kitchen",
+          "title": "Kitchen & appliances",
+          "claim": "Kitchen has a refrigerator",
+          "request": "Show the kitchen layout, sink, and visible appliances.",
+          "source": "listing text"
+        },
+        {
+          "id": "bedroom",
+          "title": "Bedroom & natural light",
+          "claim": "Furnished apartment with a desk and a window",
+          "request": "Show all bedroom corners and the window in one continuous visit.",
+          "source": "listing text"
+        },
+        {
+          "id": "bathroom",
+          "title": "Bathroom & visible condition",
+          "claim": "Bathroom condition is not independently established",
+          "request": "Show fixtures and visible signs of moisture. No destructive inspection.",
+          "source": "renter-approved baseline"
+        },
+        {
+          "id": "question-1",
+          "questionId": "q-1",
+          "title": "Renter question 1",
+          "claim": "Verify legal authority to rent.",
+          "request": "Outside this visual visit: no ownership, legal, background, or safety guarantees. Ask the appropriate qualified party.",
+          "source": "Renter question",
+          "excluded": true
+        },
+        {
+          "id": "question-2",
+          "questionId": "q-2",
+          "title": "Renter question 2",
+          "claim": "Photograph the desk and window.",
+          "request": "Collect a clear photograph and a specific visible observation addressing: Photograph the desk and window. If access or a visible answer is unavailable, record uncertainty and the reason.",
+          "source": "Renter question",
+          "excluded": false
+        }
+      ],
+      "humanRelevance": null,
+      "humanEditingSeconds": null
+    },
+    {
+      "id": "adverse-appliance",
+      "baseline": {
+        "concerns": 2,
+        "represented": 0,
+        "unsupportedListingQuotes": 0,
+        "excludedItems": 0,
+        "itemCount": 4
+      },
+      "candidate": {
+        "concerns": 2,
+        "represented": 2,
+        "unsupportedListingQuotes": 0,
+        "excludedItems": 0,
+        "itemCount": 6
+      },
+      "latencyMs": 0.063,
+      "tokens": 0,
+      "costUsd": 0,
+      "items": [
+        {
+          "id": "exterior",
+          "title": "Address & building entrance",
+          "claim": "Address supplied by the renter",
+          "request": "Show the building number and entrance together. Do not photograph occupants.",
+          "source": "renter-approved baseline"
+        },
+        {
+          "id": "kitchen",
+          "title": "Kitchen & appliances",
+          "claim": "Renovated kitchen with a dishwasher and electric range",
+          "request": "Show the kitchen layout, sink, and visible appliances.",
+          "source": "listing text"
+        },
+        {
+          "id": "bedroom",
+          "title": "Bedroom & natural light",
+          "claim": "Bedroom has a large window",
+          "request": "Show all bedroom corners and the window in one continuous visit.",
+          "source": "listing text"
+        },
+        {
+          "id": "bathroom",
+          "title": "Bathroom & visible condition",
+          "claim": "Bathroom condition is not independently established",
+          "request": "Show fixtures and visible signs of moisture. No destructive inspection.",
+          "source": "renter-approved baseline"
+        },
+        {
+          "id": "question-1",
+          "questionId": "q-1",
+          "title": "Renter question 1",
+          "claim": "Photograph the dishwasher controls.",
+          "request": "Collect a clear photograph and a specific visible observation addressing: Photograph the dishwasher controls. If access or a visible answer is unavailable, record uncertainty and the reason.",
+          "source": "Renter question",
+          "excluded": false
+        },
+        {
+          "id": "question-2",
+          "questionId": "q-2",
+          "title": "Renter question 2",
+          "claim": "If the dishwasher is absent, document the empty space.",
+          "request": "Collect a clear photograph and a specific visible observation addressing: If the dishwasher is absent, document the empty space. If access or a visible answer is unavailable, record uncertainty and the reason.",
+          "source": "Renter question",
+          "excluded": false
+        }
+      ],
+      "humanRelevance": null,
+      "humanEditingSeconds": null
+    },
+    {
+      "id": "mold-uncertainty",
+      "baseline": {
+        "concerns": 2,
+        "represented": 0,
+        "unsupportedListingQuotes": 0,
+        "excludedItems": 0,
+        "itemCount": 4
+      },
+      "candidate": {
+        "concerns": 2,
+        "represented": 2,
+        "unsupportedListingQuotes": 0,
+        "excludedItems": 0,
+        "itemCount": 6
+      },
+      "latencyMs": 0.014,
+      "tokens": 0,
+      "costUsd": 0,
+      "items": [
+        {
+          "id": "exterior",
+          "title": "Address & building entrance",
+          "claim": "Address supplied by the renter",
+          "request": "Show the building number and entrance together. Do not photograph occupants.",
+          "source": "renter-approved baseline"
+        },
+        {
+          "id": "kitchen",
+          "title": "Kitchen & appliances",
+          "claim": "Basement studio with a compact kitchen and bathroom",
+          "request": "Show the kitchen layout, sink, and visible appliances.",
+          "source": "listing text"
+        },
+        {
+          "id": "bedroom",
+          "title": "Bedroom & natural light",
+          "claim": "Bedroom condition is not independently established",
+          "request": "Show all bedroom corners and the window in one continuous visit.",
+          "source": "renter-approved baseline"
+        },
+        {
+          "id": "bathroom",
+          "title": "Bathroom & visible condition",
+          "claim": "Basement studio with a compact kitchen and bathroom",
+          "request": "Show fixtures and visible signs of moisture. No destructive inspection.",
+          "source": "listing text"
+        },
+        {
+          "id": "question-1",
+          "questionId": "q-1",
+          "title": "Renter question 1",
+          "claim": "Photograph visible discoloration near the bathroom ceiling.",
+          "request": "Collect a clear photograph and a specific visible observation addressing: Photograph visible discoloration near the bathroom ceiling. If access or a visible answer is unavailable, record uncertainty and the reason.",
+          "source": "Renter question",
+          "excluded": false
+        },
+        {
+          "id": "question-2",
+          "questionId": "q-2",
+          "title": "Renter question 2",
+          "claim": "Do not diagnose mold from a photograph.",
+          "request": "Collect a clear photograph and a specific visible observation addressing: Do not diagnose mold from a photograph. If access or a visible answer is unavailable, record uncertainty and the reason.",
+          "source": "Renter question",
+          "excluded": false
+        }
+      ],
+      "humanRelevance": null,
+      "humanEditingSeconds": null
+    },
+    {
+      "id": "no-questions",
+      "baseline": {
+        "concerns": 0,
+        "represented": 0,
+        "unsupportedListingQuotes": 0,
+        "excludedItems": 0,
+        "itemCount": 4
+      },
+      "candidate": {
+        "concerns": 0,
+        "represented": 0,
+        "unsupportedListingQuotes": 0,
+        "excludedItems": 0,
+        "itemCount": 4
+      },
+      "latencyMs": 0.009,
+      "tokens": 0,
+      "costUsd": 0,
+      "items": [
+        {
+          "id": "exterior",
+          "title": "Address & building entrance",
+          "claim": "The entrance is on Garden Street",
+          "request": "Show the building number and entrance together. Do not photograph occupants.",
+          "source": "listing text"
+        },
+        {
+          "id": "kitchen",
+          "title": "Kitchen & appliances",
+          "claim": "One-bedroom apartment with kitchen cabinets and a bathtub",
+          "request": "Show the kitchen layout, sink, and visible appliances.",
+          "source": "listing text"
+        },
+        {
+          "id": "bedroom",
+          "title": "Bedroom & natural light",
+          "claim": "The bedroom window faces east",
+          "request": "Show all bedroom corners and the window in one continuous visit.",
+          "source": "listing text"
+        },
+        {
+          "id": "bathroom",
+          "title": "Bathroom & visible condition",
+          "claim": "One-bedroom apartment with kitchen cabinets and a bathtub",
+          "request": "Show fixtures and visible signs of moisture. No destructive inspection.",
+          "source": "listing text"
+        }
+      ],
+      "humanRelevance": null,
+      "humanEditingSeconds": null
+    },
+    {
+      "id": "untrusted-listing",
+      "baseline": {
+        "concerns": 2,
+        "represented": 1,
+        "unsupportedListingQuotes": 0,
+        "excludedItems": 0,
+        "itemCount": 4
+      },
+      "candidate": {
+        "concerns": 2,
+        "represented": 2,
+        "unsupportedListingQuotes": 0,
+        "excludedItems": 0,
+        "itemCount": 5
+      },
+      "latencyMs": 0.01,
+      "tokens": 0,
+      "costUsd": 0,
+      "items": [
+        {
+          "id": "exterior",
+          "title": "Address & building entrance",
+          "claim": "Address supplied by the renter",
+          "request": "Show the building number and entrance together. Do not photograph occupants.",
+          "source": "renter-approved baseline"
+        },
+        {
+          "id": "kitchen",
+          "title": "Kitchen & appliances",
+          "claim": "Kitchen has a refrigerator",
+          "request": "Show the kitchen layout, sink, and visible appliances.",
+          "source": "listing text"
+        },
+        {
+          "id": "bedroom",
+          "title": "Bedroom & natural light",
+          "claim": "Bedroom has two windows",
+          "request": "Show all bedroom corners and the window in one continuous visit.",
+          "source": "listing text"
+        },
+        {
+          "id": "bathroom",
+          "title": "Bathroom & visible condition",
+          "claim": "Bathroom contains a shower",
+          "request": "Show fixtures and visible signs of moisture. No destructive inspection.",
+          "source": "listing text"
+        },
+        {
+          "id": "question-1",
+          "questionId": "q-1",
+          "title": "Renter question 1",
+          "claim": "Photograph the refrigerator and both bedroom windows.",
+          "request": "Collect a clear photograph and a specific visible observation addressing: Photograph the refrigerator and both bedroom windows. If access or a visible answer is unavailable, record uncertainty and the reason.",
+          "source": "Renter question",
+          "excluded": false
+        }
+      ],
+      "humanRelevance": null,
+      "humanEditingSeconds": null
+    }
+  ]
+}
