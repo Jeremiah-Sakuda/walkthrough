@@ -21,7 +21,7 @@ Historical reports in `docs/judging/2026-10-03` are unchanged. This document map
 | Neighborhood, verifier supply, access and economics | Proposed Cambridge/Garden Street pilot, explicit no-partnership language, access/travel/review/cost fields and go/no-go criteria. | Plan provided; recruitment and measurements pending |
 | Exceptions, compensation and travel stipend | `OPERATIONS.md` specifies denied access, failed collection, refunds after good-faith work, appeals, safety stop and pre-funded pilot reserve. Eligibility remains an accounting obligation; no payout is asserted. | Policy specified; reserve/payout not implemented or funded |
 | Short clear pitch, unfamiliar viewer rehearsal, public video | Main narrative shortened to one question, adverse finding, independent completion and separated earning; supplemental failure paths separated. Coordinator may add local narrated preview. A real unfamiliar-viewer rehearsal and public YouTube upload remain external evidence. | Script implemented; publication/rehearsal pending |
-| Public repository and submission packaging | MIT/license/setup retained. Local setup is supported; hosting is optional under the stated rules. Repository publication and final public video link remain owner actions. | External publication gate |
+| Public repository and submission packaging | MIT/license/setup retained. Local setup is supported; hosting is optional under the stated rules. The owner authorized public visibility; the coordinator verified the repository is PUBLIC. The public video link remains pending. | Public source complete; video publication pending |
 
 ## Local checks
 

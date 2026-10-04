@@ -1,6 +1,6 @@
 # Walkthrough
 
-[Browser verification and preview](docs/BROWSER_QA.md) · [Panel remediation](docs/REMEDIATION.md) · [Pilot and exception policy](docs/OPERATIONS.md)
+[Local narrated preview](docs/demo/README.md) · [Round-two QA and version limits](docs/ROUND2_QA.md) · [Earlier browser verification](docs/BROWSER_QA.md) · [Panel remediation](docs/REMEDIATION.md) · [Pilot and exception policy](docs/OPERATIONS.md)
 
 **See it before you sign.** A local, working apartment-verification demo for remote renters. A renter pays for a bounded evidence package, not a guarantee about a property. An unfavorable finding can still represent complete, paid work.
 
@@ -127,7 +127,7 @@ Before a public hackathon submission:
 - Exercise the model path, freeze evidence evaluation cases, and report failures as well as successes.
 - Obtain real consented evidence and renter/verifier feedback; measure travel, support, provider usage cost, and viability.
 - For any public hosting, add production identities and secure media lifecycle; local runnable instructions already support a hosted-demo-optional submission.
-- Make the repository public only when authorized, publish a public demo video shorter than three minutes, and verify current competition rules. A local recording, if present, is separate from a publicly published submission video; see the latest coordinator QA notes.
+- The repository is now public (owner-authorized and coordinator-verified). Publish a public demo video shorter than three minutes and verify current competition rules. A local recording, if present, is separate from a publicly published submission video; see the latest coordinator QA notes.
 
 ## Documentation and sources
 

@@ -1,0 +1,33 @@
+{
+  "project": "Walkthrough",
+  "sourceCommit": "5783237815484e1e039d947218b9c07d6d8f3b90",
+  "subsequentCorrectionsCommit": "c7f7ac56488704839fc9310ddc631235f7afb40c",
+  "captureNote": "Historical actual UI screenshots from the first remediation build; not a fresh recording of the final implementation.",
+  "scenes": [
+    {
+      "image": "frames/01-intro.png",
+      "title": "Evidence for a remote renter",
+      "narration": "Walkthrough helps a remote renter ask someone on the ground for a bounded evidence package. This is an edited walkthrough of actual local interface captures from the first remediation build. The listing and illustrations are synthetic. Payments are simulated, and no real provider or model execution is established."
+    },
+    {
+      "image": "frames/02-scope.png",
+      "title": "Turn a question into agreed work",
+      "narration": "The renter asks whether a dishwasher is really present. That question is now preserved as its own scope item. The renter edits the evidence request before accepting it. Each question must remain mapped to a task or to an explicit exclusion. This makes the work being purchased reviewable."
+    },
+    {
+      "image": "frames/03-authorization.png",
+      "title": "Freeze the scope before the visit",
+      "narration": "After access and terms are confirmed, the agreed checklist is frozen. The local demonstration separately authorizes the fixed sixty dollar service fee and reserves the appointment. No rental deposit is collected, and a visit cannot establish ownership, legal authority, or a safe tenancy."
+    },
+    {
+      "image": "frames/04-corrections.png",
+      "title": "Give the verifier a specific correction",
+      "narration": "Partial evidence cannot be approved as complete. The independent operator names the tasks to redo and explains what is missing. Here, the verifier receives the exact kitchen and dishwasher correction inside the visit workspace. These notes persist with the case. Synthetic sample images demonstrate the workflow, not actual inspection usefulness."
+    },
+    {
+      "image": "frames/05-unknown.png",
+      "title": "Keep completion separate from collection",
+      "narration": "A completed evidence service can have an unfavorable property finding. A simulated lost capture response leaves payment unknown while service completion and the forty dollar earning remain separate. Reconciliation resolves the existing operation instead of blindly charging again. Subsequent code also repairs restart recovery, clarifies uncertain custom samples, and enlarges mobile status text. Those final changes are not recaptured here. Live sandbox and model evidence, consented visits, user research, and a public submission video still remain."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "project": "Walkthrough",
+  "sourceCommit": "5783237815484e1e039d947218b9c07d6d8f3b90",
+  "captureMethod": "Actual UI screenshots assembled as an edited narrated walkthrough",
+  "simulation": true,
+  "providerVerified": false,
+  "durationSeconds": 107.095996,
+  "sceneCount": 5,
+  "publicUrl": null,
+  "subsequentCorrectionsCommit": "c7f7ac56488704839fc9310ddc631235f7afb40c",
+  "finalChangesRecaptured": false,
+  "streamsVerified": [
+    "h264 video 1280x720",
+    "aac audio",
+    "mov_text captions"
+  ]
+}
