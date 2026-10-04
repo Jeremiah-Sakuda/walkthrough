@@ -1,5 +1,7 @@
 # Walkthrough
 
+[Browser verification and preview](docs/BROWSER_QA.md)
+
 **See it before you sign.** A local, working apartment-verification demo for remote renters. A renter pays for a bounded evidence package, not a guarantee about a property. An unfavorable finding can still represent complete, paid work.
 
 Built for the PayPal AI Hackathon. React frontend, Node 22 backend, atomic local JSON persistence, optional PayPal sandbox and OpenAI integrations. MIT licensed.
