@@ -33,10 +33,11 @@ const server=http.createServer(async(req,res)=>{
       }
       if(req.method==='POST'&&url.pathname==='/api/paypal/webhook'){
         const event=await body(req);await payments.verifyWebhook(req.headers,event);if(!event.id)throw new AppError('Missing webhook ID');
-        await app.run(async()=>{if(store.data.webhookIds.includes(event.id))return;const ids=[event.resource?.id,event.resource?.supplementary_data?.related_ids?.order_id,event.resource?.supplementary_data?.related_ids?.authorization_id];const c=store.data.cases.find(c=>[c.payment.orderId,c.payment.authorizationId,c.payment.captureId].filter(Boolean).some(id=>ids.includes(id)));if(c)await payments.reconcile(c);store.data.webhookIds.push(event.id);store.save();});
-        return json(res,200,{received:true,note:'Provider evidence reconciled. Operator reconciliation applies workflow changes.'});
+        await app.webhook(event);
+        return json(res,200,{received:true,note:'Provider evidence reconciled and workflow state applied.'});
       }
       const sid=req.headers.cookie?.match(/(?:^|;\s*)wt_session=([^;]+)/)?.[1];const actor=sessions.get(sid);if(!actor||actor.expires<Date.now())throw new AppError('Choose a demo role to start.',401);
+      if(req.method==='POST'&&url.pathname==='/api/reset'){await body(req);return json(res,200,{...await app.reset(actor),actor});}
       if(req.method==='GET'&&url.pathname==='/api/state')return json(res,200,{...app.snapshot(actor),actor});
       const media=url.pathname.match(/^\/api\/cases\/([^/]+)\/evidence\/([^/]+)$/);
       if(req.method==='GET'&&media){const c=app.get(media[1],actor);const e=c.evidence.find(e=>e.id===media[2]);if(!e)throw new AppError('Evidence not found',404);const [prefix,b64]=e.data.split(',');res.writeHead(200,{'Content-Type':prefix.slice(5).split(';')[0],'Cache-Control':'private, no-store'});return res.end(Buffer.from(b64,'base64'));}
@@ -51,4 +52,6 @@ const server=http.createServer(async(req,res)=>{
     res.setHeader('Content-Security-Policy',"default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'");res.writeHead(200,{'Content-Type':mime[extname(file)]||'application/octet-stream'});res.end(readFileSync(file));
   }catch(error){json(res,error.status||500,{error:error.status?error.message:'Service operation could not be completed. Check configuration and reconcile any unresolved payment.'});}
 });
+const expiryTimer=setInterval(()=>app.expireDue().catch(()=>console.error('Expiry sweep failed; operator review required')),60000);expiryTimer.unref();
+app.expireDue().catch(()=>console.error('Initial expiry sweep failed; operator review required'));
 server.listen(port,host,()=>console.log(`Walkthrough: http://${host}:${port} · payments ${payments.mode} · local synthetic-data demo`));

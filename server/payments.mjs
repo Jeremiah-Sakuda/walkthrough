@@ -42,6 +42,7 @@ export class Payments {
         if(op.type==='void'&&c.payment.authorizationId){const auth=await this.request(`/v2/payments/authorizations/${c.payment.authorizationId}`);if(auth.status==='VOIDED')result=auth;}
         if(op.type==='refund'&&c.payment.captureId){const capture=await this.request(`/v2/payments/captures/${c.payment.captureId}`);if(capture.status==='REFUNDED')result={id:c.payment.captureId,status:'COMPLETED'};}
       }
+      if(result&&this.mode==='sandbox'&&['authorize','capture'].includes(op.type)&&(!result.id||result.amount?.currency_code!=='USD'||result.amount?.value!=='60.00'))result=undefined;
       if(result){op.status='confirmed';op.result=result;op.reconciledAt=new Date().toISOString();}else op.error='Provider outcome remains unresolved. No repeat charge was sent. Inspect the PayPal sandbox dashboard.';
     }
     this.store.save();return ops;

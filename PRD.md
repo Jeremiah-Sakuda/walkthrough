@@ -1,6 +1,6 @@
 # Walkthrough product requirements
 
-**Version:** 0.1. **Date:** October 3, 2026. **Status:** Proposed MVP; no implementation or validation. See the [proposal index](../README.md) for shared requirements, timeline, and payment sources.
+**Version:** 0.1. **Date:** October 3, 2026. **Status:** Proposed MVP; no implementation or validation. See the [implementation and shared requirements](README.md) for shared requirements, timeline, and payment sources.
 
 Walkthrough helps a person considering a remote rental obtain fresh, structured evidence from a local apartment visit. AI identifies missing information before the visit and compares the resulting evidence against the listing afterward. The renter buys a verification service whose scope and limitations are visible before payment.
 

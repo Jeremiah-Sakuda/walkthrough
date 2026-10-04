@@ -7,7 +7,7 @@ const generic = [
 export function ruleChecklist(listing) {
   const sentences=listing.split(/[.!?\n]+/).map(x=>x.trim()).filter(Boolean);
   const items=generic.map(x=>({...x,source:'renter-approved baseline'}));
-  for(const item of items){const word={kitchen:/kitchen|appliance|dishwasher/i,bedroom:/bedroom|sunny|natural light/i,bathroom:/bath|renovat/i,exterior:/address|building|street/i}[item.id];const s=sentences.find(t=>word.test(t));if(s){item.claim=s;item.source='listing text';}}
+  for(const item of items){const word={kitchen:/kitchen|appliance|dishwasher/i,bedroom:/bedroom|sunny|natural light/i,bathroom:/bathroom|bath|fixtures/i,exterior:/address|building|street/i}[item.id];const s=sentences.find(t=>word.test(t));if(s){item.claim=s;item.source='listing text';}}
   return items;
 }
 export async function checklist(listing, questions, env=process.env) {
